@@ -1,0 +1,18 @@
+# Terraform plugin folders (in every subfolder)
+**/.terraform/
+
+# State files: can contain secrets
+*.tfstate
+*.tfstate.*
+
+# Variable values: local only
+*.tfvars
+!*.tfvars.example
+
+# Logs and local overrides
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
