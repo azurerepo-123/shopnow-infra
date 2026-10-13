@@ -18,6 +18,7 @@ variable "location" {
 variable "public_subnet_cidr" {
   type        = string
   description = "ip range of public subnet"
+  default = "10.0.1.0/24"
 
 }
 variable "app_subnet_cidr" {
