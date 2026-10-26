@@ -24,8 +24,7 @@ resource "azurerm_private_dns_zone" "acr" {
 
 resource "azurerm_private_dns_zone_virtual_network_link" "acr" {
   name                 = "${local.name_prefix}-acr-dns-link"
-  resource_group_name = local.name_prefix
-  private_dns_zone_name   = azurerm_private_dns_zone.acr.name
+  private_dns_zone_id  = azurerm_private_dns_zone.acr.id
   virtual_network_id   = data.azurerm_virtual_network.main.id
   registration_enabled = false
   tags                 = local.common_tags

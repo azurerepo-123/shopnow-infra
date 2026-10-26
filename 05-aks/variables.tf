@@ -25,10 +25,10 @@ variable "app_subnet_name" {
   description = "name of the db subnet"
 
 }
-variable "acr_name" {
+variable "db_subnet_name" {
   type        = string
-  description = "name of the acr"
-
+  description = "name of the db subnet"
+  
 }
 variable "node_vm_size" {
   type        = string

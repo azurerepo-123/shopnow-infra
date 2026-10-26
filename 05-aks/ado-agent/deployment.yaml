@@ -17,7 +17,8 @@ spec:
     spec:
       containers:
         - name: ado-agent
-          image: acrshopnowprod3aez.azurecr.io/ado-agent:latest
+          image: acrshopnowprodzcsk.azurecr.io/ado-agent:latest
+          imagePullPolicy: Always
           env:
             - name: AZP_URL
               valueFrom:
@@ -49,6 +50,3 @@ spec:
       volumes:
         - name: agent-work
           emptyDir: {}
-      securityContext:
-        runAsNonRoot: true
-        runAsUser: 1000
